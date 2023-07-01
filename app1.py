@@ -12,6 +12,9 @@ def recommend(movie):
         recommended_movies.append(movies.iloc[i[0]].title)
     return recommended_movies
 
+movies_dict = pickle.load(open('movieslist.pkl', 'rb'))
+
+movies = pd.DataFrame(movies_dict)
 
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
